@@ -1,0 +1,18 @@
+<div class="card h-100 card-container rounded-0">
+  <div class="card-body p-0 d-flex flex-column">
+    <div class="mx-2 mt-2">
+      <h5 (click)="goToDetails()" class="card-title color-primary cursor-pointer">{{ event.title }}</h5>
+      <p (click)="goToDetails()" class="color-primary cursor-pointer">{{ event.subtitle }}</p>
+    </div>
+
+    <img (click)="goToDetails()" [src]="event.image" class="card-img mb-1 cursor-pointer" alt="Imagen del evento">
+
+    <div class="px-2 card-text mb-2">
+      <p class="mb-0">{{ event.place }}</p>
+      <p>{{ event.startDate | date: 'dd/MM/yyyy' }} - {{ event.endDate | date: 'dd/MM/yyyy'}}</p>
+      <p [innerHTML]="event.description" class="d-none d-md-block"></p>
+    </div>
+
+    <a (click)="goToDetails()" class="btn btn-primary w-100 mt-auto">Comprar</a>
+  </div>
+</div>

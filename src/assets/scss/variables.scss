@@ -1,0 +1,9 @@
+:root {
+  --colorPrimary: #008cba;
+  --colorSecondary: #87ceeb;
+  --colorWhite: #ffffff;
+}
+
+$ColorPrimary: var(--colorPrimary);
+$ColorSecondary: var(--colorSecondary);
+$ColorWhite: var(--colorWhite);

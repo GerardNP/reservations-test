@@ -1,0 +1,10 @@
+@import 'src/assets/scss/variables.scss';
+
+.card-container {
+  .btn-primary {
+    background-color: $ColorPrimary;
+    border-color: $ColorPrimary;
+    border-radius: 0;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,10 @@
+@import 'src/assets/scss/variables.scss';
+
+.header-container {
+  height: 100px;
+  background-color: $ColorSecondary;
+
+  h1 {
+    margin: 0;
+  }
+}

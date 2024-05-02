@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-12 mb-3">
+    <button class="btn btn-outline-primary d-block ms-auto" (click)="goToEventsList()">Volver</button>
+  </div>
+
+  <ng-container *ngIf="(event$ | async) as event; else eventNotFoundTemplate">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <app-sessions-list [event]="event"></app-sessions-list>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <app-shopping-cart></app-shopping-cart>
+    </div>
+  </ng-container>
+</div>
+
+
+<ng-template #eventNotFoundTemplate>
+  <div class="alert alert-primary" role="alert" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+</ng-template>

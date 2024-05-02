@@ -1,0 +1,14 @@
+.sessions-list-container {
+
+  .row-session {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .amount-selected-container {
+    width: 30px;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,26 @@
+<div class="shopping-cart-container">
+
+  <div *ngFor="let event of eventsSelected; index as indexEvent" class="mb-4">
+    <ng-container *ngIf="event.locationsSelected">
+      <h4>{{ event.event.title }}</h4>
+      <ul>
+        <ng-container *ngFor="let session of event.sessions; index as indexSession">
+          <li *ngIf="session.amountSelected" class="d-flex align-items-center mb-2">
+
+            <div class="me-auto">
+              {{ session.date | date: 'dd/MM/yyyy'}}
+            </div>
+
+            <div class="amount-selected-container me-3">
+              x{{ session.amountSelected }}
+            </div>
+
+            <div (click)="deleteOneLocation(indexEvent, indexSession)" title="Eliminar una sola localidad"
+              class="cursor-pointer icon-delete"></div>
+          </li>
+        </ng-container>
+      </ul>
+    </ng-container>
+  </div>
+
+</div>
